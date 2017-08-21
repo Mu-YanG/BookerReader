@@ -1,0 +1,71 @@
+﻿@charset "utf-8";
+
+/*
+ @ 文本框插入表情插件
+ @ 作者：水墨寒 
+ @ 日期：2013年1月28日
+*/
+
+*{ margin:0; padding:0;}
+html,body{ margin:0; padding:0;}
+
+h3{ width:760px; height:50px; line-height:50px; font-size:30px; font-weight:600; text-align:center; overflow:hidden; margin:50px auto 0px auto; color:#777777; text-shadow:0px 1px 0px rgba(255,255,255,1);}
+h4{ width:740px; padding-right:20px; height:30px; line-height:30px; font-size:16px; font-weight:600; text-align:right; overflow:hidden; margin:0px auto; color:#777777; text-shadow:0px 1px 0px rgba(255,255,255,1);}
+
+#Smohan_FaceBox{ width:760px; height:auto; position:relative; margin:50px auto; min-height:160px;}
+textarea.smohan_text{display:block; width:420px; height:78px; padding:10px 20px;  border:1px solid #cacaca; outline:none; position:relative; overflow:hidden;}
+#Smohan_FaceBox p{ display:block; width:748px;  padding:10px 0px;}
+.face{ display:block; width:20px; height:20px;  float:left;}
+.face:hover,.face.in{ background-position:0px -120px;}
+.button{ display:inline-block; width:80px; height:35px; line-height:35px; background:#6C3; border:1px solid #6C0; text-align:center; cursor:pointer; color:#ffffff; float:center; text-shadow:0px -1px 0px rgba(153,153,153,0.6);}
+img{ border:0 none;}
+
+
+
+article, aside, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+
+.comment {
+    overflow: hidden;
+    padding: 0 0 1em;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 1em;
+    *zoom: 1;
+    width: 414px;
+}
+
+.comment-img {
+    float: left;
+    margin-right: 33px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.comment-img img {
+    display: block;
+}
+
+.comment .text {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background: #fff;
+    width: 392px;
+}
+.comment .text p:last-child {
+    margin: 0;
+}
+
+.comment .text:before {
+    top: 18px;
+    left: 78px;
+    width: 9px;
+    height: 9px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}

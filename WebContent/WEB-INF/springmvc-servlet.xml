@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc" xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+    ">
+    
+       <context:component-scan base-package="controller"/>
+    <bean id="multipartResolver"    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+        
+        <property name="maxUploadSize" value="100000000000000"></property><!-- 10M -->  
+       <property name="maxInMemorySize">  
+            <value>10240000</value>  
+        </property>  
+    </bean> 
+	<mvc:annotation-driven /> 
+ 	<mvc:view-controller path="/" view-name="index"/>
+ 
+
+<bean id="simpleMappingExceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<!-- <property name="exceptionAttribute" value="exp"></property> -->
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">error</prop>
+			</props>
+		</property>
+	</bean>
+
+    
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+        <property name="prefix" value="/" />
+
+		<property name="suffix" value=".jsp" />
+    </bean>
+	<!-- 上传拦截，如最大上传值及最小上传值 -->  
+    <!--     <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+	    <property name="exceptionMappings">  
+	        <props>  
+	            <prop key="java.lang.Exception">error</prop>  
+	            这里还可以继续扩展对不同异常类型的处理  
+	        </props>  
+	    </property>  
+	</bean> --> 
+	<!--<bean name="/login" class="controller.loginConteroller"/>
+-->
+	<!--<bean name="/login" class="controller.loginConteroller"/>
+--></beans>
+
+
+
+
+
+
+
+
+
+
+
+
